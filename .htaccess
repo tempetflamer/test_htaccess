@@ -4,3 +4,4 @@
 </IfModule>
 
 Redirect /index.html /public/index.html
+Redirect /test_htaccess/index.html /test_htaccess/public/index.html
