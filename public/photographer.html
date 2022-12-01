@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+  <link href="./css/photographer.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <title>Fisheye - photographe </title>
+</head>
+
+<body>
+  <!--Header-->
+  <header aria-label="header">
+    <a href="./index.html" class="logo-link" aria-label="Retour page d'accueil FishEye" tabindex="0"><img
+        src="./assets/images/logo.png" class="logo" alt="page d'accueil FishEye"></a>
+  </header>
+  <!--End of Header-->
+  <!--Main-->
+  <main id="main">
+
+    <!--Photographer info section-->
+    <section class="photographer" aria-label="Informations Photographe" role="information"></section>
+    <!--End of photographer info section-->
+
+    <!--Stats-->
+    <div class="stats"></div>
+    <!--End of Stats-->
+
+    <!--Photographer Gallery section-->
+    <section class="gallery" aria-label="Galerie Photographe" role="information">
+      <!--filter container-->
+      <div class="listbox-container">
+        <span class="filter-by" aria-label="liste filtrante">Trier par</span>
+        <select aria-label="filtrer par" name="filtre" id="listbox" class="listbox listbox__btn" tabindex="0">
+          <option value="popularité">Popularité <i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i>
+          </option>
+          <option value="date">Date</option>
+          <option value="titre">Titre</option>
+        </select>
+      </div>
+      <!--End of filter container-->
+      <!--Gallery list container-->
+      <div class="gallery__list"></div>
+      <!--End of gallery list container-->
+    </section>
+    <!--End of Photographer Gallery section-->
+
+    <!--CONTACT MODAL-->
+    <div class="contact" role="dialog">
+      <div class="contact__content" aria-label="modale de contact" id="focus">
+        <h1 class="contact__content__title"></h1>
+        <button class="contact__content__close"><i class="fas fa-times"></i></button>
+        <div class="contact__content__body" id="modal-div" role="dialog">
+          <form name="contact__photographer" action="./photographerPage.html" method="post" id="contact-form"
+            role="dialog">
+
+            <div class="contact__content__body__formData" aria-label="entrer votre prénom">
+              <label for="prenom">Prénom</label>
+              <input class="text-control" type="text" name="prenom" id="prenom" required>
+            </div>
+            <div class="contact__content__body__formData" aria-label="entrer votre nom">
+              <label for="nom">Nom</label>
+              <input class="text-control" type="text" name="nom" id="nom" required>
+            </div>
+            <div class="contact__content__body__formData" aria-label="entrer votre email">
+              <label for="email">email</label>
+              <input class="text-control" type="email" name="email" id="email" required>
+            </div>
+            <div class="contact__content__body__formData" aria-label="entrer votre message">
+              <label for="message">Votre message</label>
+              <input class="text-control" type="text" name="message" id="message" required>
+            </div>
+
+            <button id="submit-btn" class="btn contact__content__body__submit" type="submit"
+              aria-label="envoyer formulaire">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--END OF CONTACT MODAL-->
+
+
+
+    <!--Lightbox-->
+    <div class="lightbox-modal"  role="dialog" >
+      <div class="lightbox-modal__content">
+        <!-- Previous button -->
+        <button class="lightbox-modal__content__btn prev" id="prev" type="button" aria-label="photo précédente"
+          tabindex="1"><i class="fas fa-chevron-left"></i></button>
+        <div class="lightbox-modal__content__slides">
+          <div class="lightbox-modal__content__slides--top">
+            <button class="lightbox-modal__content__close" aria-label="fermer la visualisation du média sélectionné"
+              tabindex="3"><i class="fas fa-times"></i></button>
+          </div>
+        </div>
+        <!--Next button-->
+        <button class="lightbox-modal__content__btn next" id="next" type="button" aria-label="photo suivante"
+          tabindex="2"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+    <!--End of lightbox-->
+  </main>
+  <script src="./scripts/factories/photographer.js"></script>
+  <script src="./scripts/utils/contactForm.js"></script>
+  <script src="./scripts/utils/lightbox.js"></script>
+  <script src="./scripts/utils/focusTrap.js"></script>
+  <script src="./scripts/pages/photographer.js"></script>
+  <!-- <script src="./scripts/utils/contactForm.js"></script> defer chaneg rien -->
+</body>
+
+</html>
