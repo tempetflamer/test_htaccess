@@ -5,3 +5,5 @@
 
 Redirect /index.html /public/index.html
 Redirect /test_htaccess/index.html /test_htaccess/public/index.html
+Redirect https://tempetflamer.github.io/test_htaccess/ https://tempetflamer.github.io/test_htaccess/public/index.html
+Redirect https://tempetflamer.github.io/test_htaccess/index.html https://tempetflamer.github.io/test_htaccess/public/index.html
